@@ -1,1 +1,29 @@
-
+switchport default mode routed
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname {{ hostname }}
+ip name-server vrf default {{ dns_ip }}
+!
+spanning-tree mode mstp
+!
+aaa authentication policy on-success log
+aaa authentication policy on-failure log
+!
+no aaa root
+!
+username {{ user }} secret {{ password }}
+!
+interface Ethernet1
+   no switchport
+   ip address dhcp
+   dhcp client accept default-route
+!
+interface Ethernet2
+   no switchport
+!
+ip routing
+!
+management ssh
+   client-alive interval 180
+!
