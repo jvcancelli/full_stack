@@ -1,11 +1,10 @@
 ---
 kind: pipeline
-type: exec
-name: default
+type: docker
+name: Testing Python CI/CD
  
 steps:
 - name: RUN
+  image: jvcancelli/full_stack
   commands:
   - curl http://192.168.0.4:5000/run_script
-
-
