@@ -8,3 +8,8 @@ steps:
   image: jvcancelli/full_stack
   commands:
   - curl http://192.168.0.4:5000/run_script
+
+  when:
+    branch:
+    - master
+    - main
