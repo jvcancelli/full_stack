@@ -1,11 +1,14 @@
+---
 kind: pipeline
-type: docker
-name: Testing Python CI/CD
+type: exec
+name: default
 
-
+platform:
+  os: linux
+  arch: amd64
+ 
 steps:
-- name: Install and deploy
-  image: python
+- name: RUN
   commands:
   - curl http://192.168.0.4:5000/run_script
 
