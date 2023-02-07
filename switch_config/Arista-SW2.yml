@@ -1,0 +1,7 @@
+hostname: Arista-SW2
+name-server: 168.63.129.16
+interface:
+- name: Ethernet1
+  ip_address: dhcp
+- name: loopback10
+  ip_address: 2.2.2.2/24
