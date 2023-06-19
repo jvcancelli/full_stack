@@ -4,4 +4,4 @@ interface:
 - name: Ethernet1
   ip_address: dhcp
 - name: loopback10
-  ip_address: 1.1.1.1/24
+  ip_address: 1.1.1.2/24
